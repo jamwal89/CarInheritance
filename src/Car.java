@@ -1,15 +1,23 @@
 
 public class Car extends Vehicle {
 	
-	private String carName, carType;
+	private String carName, carType, name;
 	private int carSpeed;
 	
+	private Driver dr;
+	private Person per;
+	
 	public Car() {
-		System.out.println("This is child class" );
-	}
+		dr= new Driver("name", "address");
+		
+		
+	}	
+	
 	
 	public String getcarName() {
+		
 		return carName;
+		
 	}
 	
 	public void setcarName(String carName){
@@ -25,7 +33,9 @@ public class Car extends Vehicle {
 	}
 	
 	
-	public String carPerformance() {
-		return carName + carSpeed;
+	
+	public String View() {
+		return dr.Display() + carName;
 	}
+	
 }
